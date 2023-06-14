@@ -1,0 +1,21 @@
+Country name,Regional indicator,Ladder score,Standard error of ladder score,upperwhisker,lowerwhisker,Logged GDP per capita,Social support,Healthy life expectancy,Freedom to make life choices,Generosity,Perceptions of corruption,Ladder score in Dystopia,Explained by: Log GDP per capita,Explained by: Social support,Explained by: Healthy life expectancy,Explained by: Freedom to make life choices,Explained by: Generosity,Explained by: Perceptions of corruption,Dystopia + residual
+Costa Rica,Latin America and Caribbean,7.069,0.056,7.179,6.96,9.88,0.891,71.4,0.934,-0.126,0.809,2.43,1.134,0.966,0.722,0.673,0.105,0.083,3.387
+Guatemala,Latin America and Caribbean,6.435,0.073,6.577,6.292,9.053,0.813,64.958,0.906,-0.038,0.775,2.43,0.845,0.79,0.519,0.638,0.163,0.105,3.375
+Uruguay,Latin America and Caribbean,6.431,0.046,6.521,6.341,9.966,0.925,69.1,0.896,-0.092,0.59,2.43,1.164,1.042,0.649,0.625,0.128,0.223,2.6
+Brazil,Latin America and Caribbean,6.33,0.043,6.415,6.245,9.577,0.882,66.601,0.804,-0.071,0.756,2.43,1.028,0.944,0.571,0.514,0.142,0.117,3.015
+Mexico,Latin America and Caribbean,6.317,0.053,6.42,6.213,9.859,0.831,68.597,0.862,-0.147,0.799,2.43,1.126,0.83,0.634,0.585,0.092,0.089,2.961
+Jamaica,Latin America and Caribbean,6.309,0.156,6.615,6.004,9.186,0.877,67.5,0.89,-0.137,0.884,2.43,0.891,0.932,0.599,0.618,0.099,0.035,3.135
+Panama,Latin America and Caribbean,6.18,0.073,6.323,6.036,10.35,0.896,69.652,0.872,-0.166,0.856,2.43,1.298,0.976,0.667,0.596,0.079,0.053,2.509
+Chile,Latin America and Caribbean,6.172,0.046,6.262,6.081,10.071,0.882,70,0.742,-0.044,0.83,2.43,1.2,0.946,0.678,0.438,0.159,0.07,2.682
+El Salvador,Latin America and Caribbean,6.061,0.065,6.188,5.933,9.054,0.762,66.402,0.888,-0.11,0.688,2.43,0.845,0.675,0.565,0.615,0.116,0.16,3.085
+Colombia,Latin America and Caribbean,6.012,0.061,6.132,5.892,9.557,0.847,68.001,0.837,-0.135,0.841,2.43,1.021,0.866,0.615,0.554,0.1,0.063,2.794
+Nicaragua,Latin America and Caribbean,5.972,0.083,6.134,5.81,8.62,0.864,67.657,0.836,0.02,0.664,2.43,0.693,0.904,0.604,0.553,0.201,0.176,2.841
+Argentina,Latin America and Caribbean,5.929,0.056,6.04,5.819,9.962,0.898,69,0.828,-0.182,0.834,2.43,1.162,0.98,0.646,0.544,0.069,0.067,2.461
+Honduras,Latin America and Caribbean,5.919,0.082,6.081,5.758,8.648,0.812,67.3,0.857,0.081,0.809,2.43,0.703,0.787,0.593,0.578,0.241,0.083,2.934
+Peru,Latin America and Caribbean,5.84,0.075,5.988,5.692,9.458,0.832,68.25,0.822,-0.154,0.891,2.43,0.986,0.833,0.623,0.536,0.087,0.031,2.744
+Ecuador,Latin America and Caribbean,5.764,0.057,5.875,5.653,9.313,0.821,68.8,0.842,-0.124,0.843,2.43,0.935,0.806,0.64,0.56,0.107,0.062,2.653
+Bolivia,Latin America and Caribbean,5.716,0.053,5.819,5.613,9.046,0.81,63.901,0.875,-0.077,0.839,2.43,0.842,0.782,0.486,0.6,0.138,0.064,2.805
+Paraguay,Latin America and Caribbean,5.653,0.092,5.832,5.473,9.448,0.893,65.9,0.876,0.028,0.882,2.43,0.983,0.97,0.549,0.602,0.206,0.037,2.306
+Dominican Republic,Latin America and Caribbean,5.545,0.071,5.685,5.405,9.802,0.853,66.102,0.86,-0.133,0.714,2.43,1.106,0.879,0.555,0.581,0.101,0.144,2.178
+Venezuela,Latin America and Caribbean,4.892,0.064,5.017,4.767,9.073,0.861,66.7,0.615,-0.169,0.827,2.43,0.852,0.897,0.574,0.284,0.078,0.072,2.135
+Haiti,Latin America and Caribbean,3.615,0.173,3.953,3.276,7.477,0.54,55.7,0.593,0.422,0.721,2.43,0.294,0.173,0.227,0.257,0.463,0.139,2.06

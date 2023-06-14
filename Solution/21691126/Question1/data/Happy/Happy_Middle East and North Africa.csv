@@ -1,0 +1,18 @@
+Country name,Regional indicator,Ladder score,Standard error of ladder score,upperwhisker,lowerwhisker,Logged GDP per capita,Social support,Healthy life expectancy,Freedom to make life choices,Generosity,Perceptions of corruption,Ladder score in Dystopia,Explained by: Log GDP per capita,Explained by: Social support,Explained by: Healthy life expectancy,Explained by: Freedom to make life choices,Explained by: Generosity,Explained by: Perceptions of corruption,Dystopia + residual
+Israel,Middle East and North Africa,7.157,0.034,7.224,7.09,10.575,0.939,73.503,0.8,0.031,0.753,2.43,1.376,1.074,0.788,0.509,0.208,0.119,3.083
+Bahrain,Middle East and North Africa,6.647,0.068,6.779,6.514,10.669,0.862,69.495,0.925,0.089,0.722,2.43,1.409,0.899,0.662,0.661,0.246,0.139,2.631
+United Arab Emirates,Middle East and North Africa,6.561,0.039,6.637,6.484,11.085,0.844,67.333,0.932,0.074,0.589,2.43,1.555,0.86,0.594,0.67,0.236,0.223,2.422
+Saudi Arabia,Middle East and North Africa,6.494,0.056,6.604,6.384,10.743,0.891,66.603,0.877,-0.149,0.684,2.43,1.435,0.964,0.571,0.603,0.09,0.163,2.668
+Kuwait,Middle East and North Africa,6.106,0.066,6.235,5.977,10.817,0.843,66.9,0.867,-0.104,0.736,2.43,1.461,0.857,0.58,0.591,0.12,0.13,2.368
+Libya,Middle East and North Africa,5.41,0.076,5.558,5.262,9.622,0.827,62.3,0.771,-0.087,0.667,2.43,1.044,0.821,0.435,0.474,0.131,0.174,2.331
+Turkey,Middle East and North Africa,4.948,0.046,5.038,4.857,10.24,0.822,67.199,0.576,-0.139,0.776,2.43,1.26,0.809,0.59,0.236,0.097,0.104,1.852
+Morocco,Middle East and North Africa,4.918,0.06,5.036,4.8,8.903,0.56,66.208,0.774,-0.236,0.801,2.43,0.792,0.219,0.558,0.477,0.034,0.088,2.749
+Algeria,Middle East and North Africa,4.887,0.053,4.991,4.783,9.342,0.802,66.005,0.48,-0.067,0.752,2.43,0.946,0.765,0.552,0.119,0.144,0.12,2.242
+Iraq,Middle East and North Africa,4.854,0.059,4.97,4.738,9.24,0.746,60.583,0.63,-0.053,0.875,2.43,0.91,0.638,0.381,0.302,0.153,0.041,2.429
+Iran,Middle East and North Africa,4.721,0.055,4.828,4.614,9.584,0.71,66.3,0.608,0.218,0.714,2.43,1.03,0.557,0.561,0.275,0.33,0.144,1.823
+Tunisia,Middle East and North Africa,4.596,0.058,4.709,4.484,9.266,0.691,67.201,0.656,-0.201,0.87,2.43,0.919,0.515,0.59,0.334,0.057,0.044,2.138
+Lebanon,Middle East and North Africa,4.584,0.055,4.691,4.477,9.626,0.848,67.355,0.525,-0.073,0.898,2.43,1.045,0.868,0.595,0.175,0.14,0.026,1.736
+Palestinian Territories,Middle East and North Africa,4.517,0.067,4.649,4.384,8.485,0.826,62.25,0.653,-0.163,0.821,2.43,0.646,0.819,0.434,0.33,0.082,0.075,2.131
+Jordan,Middle East and North Africa,4.395,0.062,4.516,4.273,9.182,0.767,67,0.755,-0.167,0.705,2.43,0.89,0.685,0.583,0.455,0.079,0.15,1.553
+Egypt,Middle East and North Africa,4.283,0.045,4.371,4.195,9.367,0.75,61.998,0.749,-0.182,0.795,2.43,0.954,0.647,0.426,0.446,0.069,0.092,1.648
+Yemen,Middle East and North Africa,3.658,0.07,3.794,3.521,7.578,0.832,57.122,0.602,-0.147,0.8,2.43,0.329,0.831,0.272,0.268,0.092,0.089,1.776

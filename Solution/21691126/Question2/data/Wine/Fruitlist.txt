@@ -1,0 +1,45 @@
+Fruits
+Apple
+Apricot|Apricots
+Asian Pear
+Banana
+Beets
+Blackberries|Blackberry
+Blueberries
+Boysenberries
+Carrots
+Cherries
+Cranberries|Cranberry
+Dates
+Dried Plums
+Fig|Figs
+Goji berries
+Gooseberries
+Gooseberry
+Grapefruit
+Grapes
+Kiwi
+Kiwifruit
+Lemon|Lemons
+Lime|Limes
+Madarins
+Mandarin Oranges
+Mango|Mangos
+Melon
+Nectarine|Nectarines
+Orange|Oranges
+Papaya|Papayas
+Passion Fruit
+Peach|Peaches
+Pear|Pears
+Pineapple
+Plum|Plums
+Pomegranate
+Prunes
+Raisins
+Raspberries
+Squash
+Strawberries
+Tangelo
+Tangerine|Tangerines
+Watermelon

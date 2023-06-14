@@ -1,0 +1,198 @@
+---
+title: "What is Happiness, really?"
+documentclass: elsarticle
+Thesis_FP: no
+output:
+  pdf_document:
+    keep_tex: yes
+    template: Tex/TexDefault.txt
+    fig_width: 3.5
+    fig_height: 3.5
+  html_document:
+    df_print: paged
+Author1: Wesley Williams
+Ref1: Stellenbosch University
+Email1: 21691126\@sun.ac.za
+BottomRFooter: \footnotesize Page \thepage
+addtoprule: yes
+addfootrule: yes
+margin: 2.3
+bottom: 2
+top: 2.5
+HardSet_layout: yes
+linenumbers: no
+bibliography: Tex/ref.bib
+csl: "Tex/harvard-stellenbosch-university.csl"
+RemovePreprintSubmittedTo: yes
+toc: no
+numbersections: yes
+fontsize: 11pt
+linestretch: 1.2
+link-citations: yes
+AddTitle: yes
+---
+
+<!-- First: Set your default preferences for chunk options: -->
+
+<!-- If you want a chunk's code to be printed, set echo = TRUE. message = FALSE stops R printing ugly package loading details in your final paper too. I also suggest setting warning = FALSE and checking for warnings in R, else you might find ugly warnings in your paper. -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 6, fig.height = 5, fig.pos="H", fig.pos = 'H')
+# Note: Include = FALSE implies the code is executed, but not printed in your pdf.
+# warning and message = FALSE implies ugly messages and warnings are removed from your pdf.
+# These should be picked up when you execute the command chunks (code sections below) in your rmd, not printed in your paper!
+
+# Lets load in example data, and see how this can be stored and later called from your 'data' folder.
+if(!require("tidyverse")) install.packages("tidyverse")
+library(tidyverse)
+library(ggplot2)
+
+list.files('code/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+
+list.files('..//Question1/code/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+
+list.files('..//Question2/code/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+
+movies <- read.csv("data/Movies/Movies.csv")
+
+```
+
+
+<!-- ############################## -->
+<!-- # Start Writing here: -->
+<!-- ############################## -->
+
+# Introduction \label{Introduction}
+```{r}
+rating <- movies %>% 
+    filter(Rotten.Tomatoes.. >= 80) 
+   
+
+ratingplot <- rating %>% 
+    ggplot()+
+    geom_point(aes(x = Rotten.Tomatoes.., y = Audience..score.., size = Profitability), color = ifelse(rating$Audience..score.. >= 85, "green", "red"), alpha = 0.6 )
+
+ratingplot
+```
+
+```{r}
+studio_plotter <- function(movies){
+disney <- movies %>% 
+    na.omit() %>% 
+    group_by(Lead.Studio) %>% 
+    summarise_at(vars(c(Profitability, Worldwide.Gross)),~median(.)) %>% 
+    arrange(desc(Worldwide.Gross)) %>% 
+    ungroup()
+
+order <- disney$Lead.Studio
+
+disneyplot <- disney %>% 
+     plot_orderset(., Column = "Lead.Studio", Order = order) %>% 
+    ggplot()+
+    geom_bar(aes(x =Lead.Studio, y = Worldwide.Gross, fill = Lead.Studio), stat = "identity" ) +
+    geom_text(aes(Lead.Studio, y = Worldwide.Gross, label =  round(Profitability, 1)), vjust = 1)+
+    labs(title = "Prof and Gross", x = "", y = "Worldwide Gross (in millions)")+
+   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    guides(fill = F)
+
+
+disneyplot
+
+}
+ 
+studio_plotter(movies)
+```
+Try get profitability and ratings
+```{r}
+library(ggplot2)
+
+
+```
+
+```{r}
+audience <- movies %>% 
+  select(c(Lead.Studio, Audience..score.., Worldwide.Gross)) %>% 
+  na.omit()
+
+correlation <- cor(audience$Audience..score.., audience$Worldwide.Gross, method = "spearman")
+
+
+correlplot <- audience %>% 
+  ggplot() +
+  geom_point(aes(x = Audience..score.., y = Worldwide.Gross)) +
+  geom_smooth(aes(x = Audience..score.., y = Worldwide.Gross), stat = "smooth", method = "lm")
+
+correlplot
+```
+
+```{r}
+studio_cor <- audience %>%
+    na.omit() %>% 
+  group_by(Lead.Studio) %>%
+  summarise(correlation = cor(Audience..score.., Worldwide.Gross, method = "spearman")) %>% 
+    arrange(desc(correlation))
+
+
+
+order <- studio_cor$Lead.Studio
+
+plot2 <- studio_cor %>% 
+    plot_orderset(., Column = "Lead.Studio", Order = order) %>% 
+    na.omit() %>% 
+    ggplot()+
+    geom_bar(aes(x = Lead.Studio, y = correlation, fill = Lead.Studio), stat = "identity")+
+    geom_hline(yintercept = 0.8, linetype = "dashed", color = "red")+
+    labs(title = "Correlation of Grossing and Audience score", x = "", y = "Correlation")+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    guides(fill = F)
+
+plot2
+```
+
+```{r}
+
+
+critics <- movies %>% 
+  select(c(Lead.Studio, Rotten.Tomatoes.., Worldwide.Gross)) %>% 
+  na.omit()
+studio_cor1 <- critics %>%
+    na.omit() %>% 
+  group_by(Lead.Studio) %>%
+  summarise(correlation = cor(Rotten.Tomatoes.., Worldwide.Gross, method = "spearman")) %>% 
+    arrange(desc(correlation))
+
+
+
+order <- studio_cor1$Lead.Studio
+
+plot3 <- studio_cor1 %>% 
+    plot_orderset(., Column = "Lead.Studio", Order = order) %>% 
+    na.omit() %>% 
+    ggplot()+
+    geom_bar(aes(x = Lead.Studio, y = correlation, fill = Lead.Studio), stat = "identity")+
+    geom_hline(yintercept = 0.8, linetype = "dashed", color = "red")+
+    labs(title = "Correlation of Grossing and Critics score", x = "", y = "Correlation")+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    guides(fill = F)
+
+plot3
+```
+
+<!-- Make title of bibliography here: -->
+<!-- \newpage -->
+
+\newpage
+
+# References {-}
+
+<div id="refs"></div>
+
+
+# Appendix {-}
+
+## Appendix A {-}
+
+Some appendix information here
+
+## Appendix B {-}
+
