@@ -67,7 +67,7 @@ g <- plotter1(happy)
    g
 ```
 
-```{r warning =  FALSE, fig.align = 'center', fig.cap = "Plot2.\\label{Figure2}", fig.ext = 'png', fig.height = 5, fig.width = 7}
+```{r fig.align='center', fig.cap="Plot2.\\label{Figure2}", fig.ext='png', fig.height=5, fig.width=, warning=FALSE}
 
 barplot <- happy %>% 
     group_by(`Regional indicator`) %>% 
